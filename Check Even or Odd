@@ -18,3 +18,27 @@ int main(){
     }
     cout << endl;
 }
+
+//More Advance and efficient approach for this problem is to go by bitwise AND Operator 
+/*So the last bit of every odd number is 1, while for even numbers it's zero so if we use bitwise AND 
+operator we can easily find out which Number is Even and which is Odd. */
+
+#include<iostream>
+using namespace std;
+bool isEven(int n){
+    if((n & 1) == 0){
+    return true;
+    }else {
+        return false;
+        }
+    }
+int main(){
+    int n;
+    cin >> n;
+    if(isEven(n)){
+        cout << "Even";
+    }else{
+        cout << "Odd";
+    }
+cout << endl;
+}
