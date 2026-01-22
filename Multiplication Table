@@ -1,2 +1,29 @@
+//This is a basic iterative approach to find the Multiplication Table for any positive integer
+// It has O(1) Time Complexity and O(1) Space Complexity.
 #include<iostream>
 using namespace std;
+void printTable(int n){
+    for(int i=1;i<=10;i++){
+        cout<<n <<"*" << i << "=" << n*i <<endl;
+    }
+}
+int main(){
+    int n;
+    cin>>n;
+    printTable(n);
+}
+//Here Comes a Recursive Approach to find the Multiplication Table 
+// It has O() Time Complexity and O() Space Complexity.
+#include <iostream>
+using namespace std;
+void printTable(int n,int i=1){
+    if(i==11) return;
+    cout << n << "*" << i << "=" << n*i <<endl;
+    i++;
+    printTable(n,i);
+}
+int main(){
+    int n;
+    cin>>n;
+    printTable(n);
+}
