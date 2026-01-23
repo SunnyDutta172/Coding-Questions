@@ -1,0 +1,61 @@
+// first we have the naive approach which has a Time and Space Complexity of O(1) 
+#include <iostream>
+using namespace std;
+void swap(int &a,int &b){
+int temp = a;
+a = b;
+b = temp;
+}
+int main(){
+int a,b;
+cin >> a >> b;
+swap(a,b);
+cout << a << " " << b << endl;
+}
+// We can also use pointers to solve this problem 
+#include <iostream>
+using namespace std;
+void swap(int *a,int *b){
+int temp  = *a;
+*a = *b;
+*b = temp;
+}
+int main(){
+int a,b;
+cin >> a >> b;
+swap(&a,&b);
+cout << a << " " << b << endl;
+}
+// We can also use the swap in-built function in cpp
+#include <iostream>
+using namespace std;
+int main(){
+int a,b;
+cin >> a >> b;
+swap(a,b);
+cout << a << " " << b << endl;
+}
+// We can also use the Arithmetic Operators to solve the swap problem 
+#include <iostream>
+using namespace std;
+int main(){
+int a,b;
+cin >> a >> b;
+cout << a << " " << b << endl;
+a = a+b;
+b = a-b;
+a = a-b;
+cout << a << " " << b << endl;
+}
+// There is one another to solve this problem and that is using XOR Operator
+#include <iostream>
+using namespace std;
+int main(){
+int a,b;
+cin >> a >> b;
+cout << a << " " << b << endl;
+a = a^b;
+b = a^b;
+a = a^b;
+cout << a << " " << b << endl;
+}
