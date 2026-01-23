@@ -1,0 +1,28 @@
+//first we will use the naive approach of O(n) Time Complexity and O(1) Space Complexity
+#include <iostream>
+using namespace std;
+int squareSum(int n){
+  int sum = 0;
+  for(int i=1;i<=n;i++){
+  sum += (i*i);
+  }
+  return sum;
+}
+int main(){
+  int n;
+  cin >> n;
+  cout << squareSum(n) << endl;
+}
+// Now more efficient approach by using the mathematical formula for calculating the sum of squares and it has Time Complexity of O(1) and O(1) Space Complexity
+// 1^2 + 2^2 + ... = ((n)*(n+1)*(2n+1))/6. 
+// In this formula for larger values of n, the value might overflow. But we can avoid the overflow to some extent by using ((n)*(n+1))/2 * (2*n+1)/3.
+#include <iostream>
+using namespace std;
+int squareSum(int n){
+  return (n*(n+1)*(2*n+1))/6;
+}
+int main(){
+int n;
+cin >> n;
+cout << squareSum(n) << endl;
+}
