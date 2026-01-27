@@ -1,0 +1,13 @@
+//Given two integers n and m where m!=0.We have to find the number closest to n and divisible by m.If there exist more than one number then the output will show which one of the values has maximum absolute value.
+#include <iostream>
+#include <climits>
+using namespace std;
+int closestNumber(int n,int m){
+  int closest = 0;
+  int minDifference = INT_MAX;
+int main(){
+int n,m;
+cin >> n >> m;
+cout << closestNumber(n,m) << endl;
+return 0;
+}
