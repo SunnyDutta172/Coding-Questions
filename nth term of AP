@@ -1,0 +1,33 @@
+//You will be given first two terms of an AP and your job is to find the nth term.
+//First we will try this by using forloop Approach which is very basic as you add the number to the correct common difference for the nth time using for loop.
+#include <iostream>
+using namespace std;
+int nTerm(int a1,int a2,int n){
+  int d = a2-a1;
+  int nthTerm = a1;
+  for(int i=1;i<n;i++){
+  nthTerm += d;
+  }
+  return nthTerm;
+}
+  int main(){
+  int a1,a2,n;
+  cin >> a1 >> a2 >> n;
+  cout << nTerm(a1,a2,n);
+  return 0;
+  }
+
+  //Now we will solve this using the nth Term formula that we study in Mathematics.
+  #include <iostream>
+  using namespace std;
+  int nTerm(int a1,int a2,int n){
+    int d = a2-a1;
+    int an = a1+(n-1)*d;
+    return an;
+  }
+  int main(){
+  int a1,a2,n;
+  cin >> a1 >> a2 >> n;
+  cout << nTerm(a1,a2,n) << endl;
+  return 0;
+  }
