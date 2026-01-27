@@ -1,0 +1,14 @@
+//You are given a cubic dice of 6 faces and the faces are numbered from one to six.You will be given one face of the cubic dice and my job is to find out what its opposite face number is:
+#include <iostream>
+using namespace std;
+int findNumber(int n){
+  int num = 7-n;
+  return num;
+}
+int main(){
+int n;
+cin >> n;
+cout << findNumber(n) << endl;
+return 0;
+}
+// We can solve this by pure observation and that is the sum of the opposite faces of a cubical dice is 7.
