@@ -13,7 +13,8 @@ bool doOverlap(Point l1,Point r1,Point l2,Point r2){
 return true;
 }
 int main(){
-cin >> &Point->l1 >> &Point->r1 >> &Point->l2 >> &Point->r2;
+Point l1,r1,l2,r2;
+cin >> l1.x >> l1.y >> r1.x >> r1.y >> l2.x >> l2.y >> r2.x >> r2.y;
 cout << doOverlap(l1,r1,l2,r2) << endl;
 return 0;
 }
